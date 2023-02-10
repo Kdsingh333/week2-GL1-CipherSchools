@@ -7,10 +7,13 @@ import (
 	"github.com/Kdsingh333/week1-GL1-CipherSchools/database"
 	"github.com/Kdsingh333/week1-GL1-CipherSchools/models"
 	"github.com/gin-gonic/gin"
-	
+	"gorm.io/gorm"
 )
 
 
+type Handler struct{
+	DB *gorm.DB
+}
 
 func (h *Handler)GetBooks(in *gin.Context) {
       books,err := database.GetBooks(h.DB)

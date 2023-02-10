@@ -19,6 +19,5 @@ func Setup() {
 		log.Fatal(err)
 	}
 	db.AutoMigrate(models.Book{})
-	db.AutoMigrate(models.Users{})
 	DB= db
 }
